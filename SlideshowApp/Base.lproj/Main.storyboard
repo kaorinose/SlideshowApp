@@ -32,9 +32,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Px-YX-ioo">
-                                <rect key="frame" x="226" y="684" width="79" height="34"/>
+                                <rect key="frame" x="268" y="684" width="37" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="再生/停止"/>
+                                <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="startStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G15-5L-Ega"/>
                                 </connections>
