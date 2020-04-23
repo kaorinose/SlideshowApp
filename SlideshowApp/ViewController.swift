@@ -10,6 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // 進むボタンの外見
+    @IBOutlet weak var moveViewButton: UIButton!
+    
+    // 戻るボタンの外見
+    @IBOutlet weak var returnViewButton: UIButton!
+    
+    // 再生・停止ボタンの外見
+    @IBOutlet weak var startStopViewButton: UIButton!
+    
+    // 画像の外見
     @IBOutlet weak var imageView1: UIImageView!
     
     // タイマーにの設定
@@ -67,22 +77,22 @@ class ViewController: UIViewController {
             // タイマーを設定
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(onTimer(_:)), userInfo: nil, repeats: true)
             //再生・停止ボタンタップ時に進むボタン・戻るボタンのタップ非表示
-            //moveButton.isEnabled = false
-            //returnButton.isEnabled = false
+            moveViewButton.isEnabled = false
+            returnViewButton.isEnabled = false
             // ボタンの名前を停止とする
-            //startStopButton.setTitle("停止", for: .normal)
+            startStopViewButton.setTitle("停止", for: .normal)
             // 背景色・ボタン内テキストサイズを変更
-            self.view.backgroundColor = UIColor.lightGray
+            self.view.backgroundColor = UIColor.yellow
         } else if self.timer != nil {
             // タイマーを停止
             self.timer.invalidate()
             // nil にして再び再生(nil の時にタイマー生成)
             self.timer = nil
             //再生・停止ボタンタップ時に進むボタン・戻るボタンのタップ非表示
-            //moveButton.isEnabled = true
-            //returnButton.isEnabled = true
+            moveViewButton.isEnabled = true
+            returnViewButton.isEnabled = true
             // ボタンの名前を再生とする
-            //startStopButton.setTitle("再生", for: .normal)
+            startStopViewButton.setTitle("再生", for: .normal)
             self.view.backgroundColor = UIColor.white
         }
     }
