@@ -96,5 +96,20 @@ class ViewController: UIViewController {
             self.view.backgroundColor = UIColor.white
         }
     }
+    
+    // 画像押下時の処理
+    @IBAction func onTapAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "toZoomIn", sender: nil)
+    }
+    
+    // 遷移元から遷移先にデータ(画像)を渡す
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のResultViewControllerのインスタンスを取得する
+        let ResultViewController:ResultViewController = segue.destination as! ResultViewController
+        // 画像を読み込み
+        imageView1.image = images[imageIndex]
+    // 遷移先のZoomInViewControllerで宣言しているselectedImgに値を代入して渡す
+        ResultViewController.selectedImg = imageView1.image
+    }
 }
 

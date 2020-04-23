@@ -10,21 +10,21 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    // 画像２の外見
+    @IBOutlet weak var imageView2: UIImageView!
+    
+    var selectedImg: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        // 画像を設定
+        imageView2.image = selectedImg
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // 戻るボタンを押した時の処理
+    @IBAction func backBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    */
-
+    
 }
