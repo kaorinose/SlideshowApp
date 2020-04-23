@@ -110,6 +110,16 @@ class ViewController: UIViewController {
         imageView1.image = images[imageIndex]
     // 遷移先のZoomInViewControllerで宣言しているselectedImgに値を代入して渡す
         ResultViewController.selectedImg = imageView1.image
+        // タイマーを停止
+        self.timer.invalidate()
+        // nil にして再び再生(nil の時にタイマー生成)
+        self.timer = nil
+        //再生・停止ボタンタップ時に進むボタン・戻るボタンのタップ非表示
+        moveViewButton.isEnabled = true
+        returnViewButton.isEnabled = true
+        // ボタンの名前を再生とする
+        startStopViewButton.setTitle("再生", for: .normal)
+        self.view.backgroundColor = UIColor.white
     }
 }
 
