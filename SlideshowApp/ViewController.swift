@@ -81,8 +81,8 @@ class ViewController: UIViewController {
             returnViewButton.isEnabled = false
             // ボタンの名前を停止とする
             startStopViewButton.setTitle("停止", for: .normal)
-            // 背景色・ボタン内テキストサイズを変更
-            self.view.backgroundColor = UIColor.yellow
+            // 背景色・ボタン内テキストサイズを変更（さくら色設定）
+            self.view.backgroundColor = UIColor.init(red: 1.0, green: 0.9, blue: 0.93, alpha: 1.0)
         } else if self.timer != nil {
             // タイマーを停止
             self.timer.invalidate()
