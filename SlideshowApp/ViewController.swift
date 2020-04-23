@@ -14,7 +14,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func moveButton(_ sender: Any) {
+    }
+    
+    @IBAction func returnButton(_ sender: Any) {
+    }
+    
+    @IBAction func startStopButton(_ sender: Any) {
+    }
+    
 
 }
 
